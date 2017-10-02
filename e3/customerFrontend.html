@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="formChecker.js"></script>
+</head>
+<body>
+	<div class="main">
+		<form action="customerFrontend.php" name="itemForm" id="fform" class="item" method="post" onsubmit="return check();" >
+			<br>
+			<label>User</label>
+			<input type="text" name="username" datatype=*>
+			<label>PassWord</label>
+			<input type="password" name="pwd"><br/>
+			<table class="itemTable">
+				<tr>
+					<td>
+						Item
+					</td>
+					<td>
+						Price
+					</td>
+					<td>
+						Quantity
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>
+						apple
+					</td>
+					<td>
+						$100
+					</td>
+					<td>
+						<input type="text" name="num1" value="">
+					</td>
+					<td>
+						<input type="checkbox" name="item[]" id="c2"value="apple">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						banana
+					</td>
+					<td>
+						$100
+					</td>
+					<td>
+						<input type="text" name="num2" value="">
+					</td>
+					<td>
+						<input type="checkbox" name="item[]" id="c1" value="banana">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Pear
+					</td>
+					<td>
+						$100
+					</td>
+					<td>
+						<input type="text" name="num3" value="">
+					</td>
+					<td>
+						<input type="checkbox" name="item[]" id="c3" value="pear">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Ferrari
+					</td>
+					<td>
+						$100
+					</td>
+					<td>
+						<input type="text" name="num4" value="">
+					</td>
+					<td>
+						<input type="checkbox" name="item[]" id="c4" value="Ferrari">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Lamborghini
+					</td>
+					<td>
+						$100
+					</td>
+					<td>
+						<input type="text" name="num5" value="">
+					</td>
+					<td>
+						<input type="checkbox" name="item[]" id="c5" value="Lamborghini">
+					</td>
+				</tr>
+			</table>
+			<div class="shipping">
+						shipping &nbsp;&nbsp;
+			<label>Free 7 day</label><input type="radio" id="ddd" name="express" value="Free 7 day">
+			<label>$50.00 over night</label><input type="radio" id="ccc" name="express" value="$50.00 over night">
+			<label>$5.00 three day</label><input type="radio" id="xxx" name="express" value="$5.00 three day">
+			</div>
+			<div class="submitBtn">
+				<input type="submit" name="submit" value="submit" >
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="reset" name="" value="reset">
+			</div>
+			
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+
+	window.onload = function(){
+	var username = document.getElementsByTagName("username");
+	var password = document.getElementsByTagName("pwd");
+    function check(){
+    	return false;
+		// if (validate_required(username.value,"Please input your password")) {
+		// 	if (isEmail(trim(username.value)) {
+		// 		return true;
+		// 	}else{
+		// 		return false;
+		// 	}
+		// }else{
+		// 	return false;
+		// }
+	}
+    function isEmail (str){
+    	var reg=/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+    	return reg.test(str);
+    }
+	function validate_required(field,alerttxt)
+	{
+	with (field)
+	{
+	if (value==null||value=="")
+	  {alert(alerttxt);return false}
+	else {return true}
+	}
+	}
+　　
+
+};
+	
+</script>
+</html>
